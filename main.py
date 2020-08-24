@@ -6,6 +6,7 @@
 import pyautogui
 from tkinter import *
 import keyboard 
+import time
 
 win = Tk()
 win.geometry("300x60")
@@ -13,6 +14,7 @@ win.resizable(False,False)
 win.title("Cursor Automation")
 
 def moving_cursor():
+	time.sleep(5)
 	while True:
 		pyautogui.moveTo(500,300, duration = 1.5)
 		if keyboard.is_pressed('p'):
