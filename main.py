@@ -1,7 +1,6 @@
-# This is the final version of the project
-# maybe there are things that i can improve
-# but Im very happy with the result :)
-
+#This code is going to be updated
+#everytime i realize a new version
+#any feedback is welcome :)
 
 import pyautogui
 from tkinter import *
@@ -15,13 +14,17 @@ win.title("Cursor Automation")
 
 def moving_cursor():
 	time.sleep(5)
+	x, y = pyautogui.position()
 	while True:
-		pyautogui.moveTo(500,300, duration = 1.5)
+		pyautogui.moveTo(x + 700,y, duration = 2)
+		time.sleep(3)
+		if keyboard.is_pressed('p'): #press and hold p to stop
+			break
+		pyautogui.moveTo(x,y, duration = 2)
+		time.sleep(3)
 		if keyboard.is_pressed('p'):
 			break
-		pyautogui.moveTo(1000,300, duration = 1.5)
-		if keyboard.is_pressed('p'):
-			break
+		
 		
 size_font = dict(size = 30)
 
